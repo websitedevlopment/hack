@@ -1,1 +1,104 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/4e55c5f54e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+      <h1 class="logo"><span class="text-color">Mus</span>ical <span class="text-color">M</span>enu</h1> 
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#explore">Discover</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li><a href="#">Co</a></li> -->
+        </ul>
+    </nav>
+    <header class="header">
+        <div>
+            <h1 class="head-text1">You too crazy about that beat?</h1>
+            <h3 class="head-text2">Fill your life with the color of melodies!</h3>
+            <p class="p-text1">Be the part of community which never gets off beat.</p>
+            <button class="btn">Join Us</button>
+        </div>
+    </header>
+    <section id="explore" class="container">
+        <div class="instrument">
+            <i class="fas fa-guitar fa-4x" ></i>
+            <h3 class="instrument-h">Guitar</h3>
+            <p class="instrument-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse vel dolores est ipsum perferendis reprehenderit ab accusamus delectus debitis quisquam saepe, molestias error enim eos tenetur non eveniet magni.</p>
+            
+        </div>
+        <div class="instrument">
+            <i class="fas fa-drum fa-4x"></i>
+            <h3 class="instrument-h">Drums</h3>
+            <p class="instrument-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse vel dolores est ipsum perferendis reprehenderit ab accusamus delectus debitis quisquam saepe, molestias error enim eos tenetur non eveniet magni.</p>
+            
+        </div>
+    </section>
+    <section id="explore" class="container">
+        <div class="instrument">
+            <i class="fas fa-microphone fa-4x" ></i>
+            <h3 class="instrument-h">Vocals</h3>
+            <p class="instrument-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse vel dolores est ipsum perferendis reprehenderit ab accusamus delectus debitis quisquam saepe, molestias error enim eos tenetur non eveniet magni.</p>
+            
+        </div>
+        <div class="instrument">
+            <i class="fas fa-sliders-h fa-4x"></i>
+            <h3 class="instrument-h">EDM</h3>
+            <p class="instrument-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse vel dolores est ipsum perferendis reprehenderit ab accusamus delectus debitis quisquam saepe, molestias error enim eos tenetur non eveniet magni.</p>
+            
+        </div>
+    </section>
+    <section id="about">
+        <div class="about">
+            <h1 class="about-h1">About Us</h1>
+            <h2 class="about-h2">Musical Menu is the place to find peace.</h2>
+            <h3 class="about-h3">Here you Learn, Share, Grow!</h3>
+            <p class="about-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deleniti in iure illo. Earum minima quos assumenda, expedita nesciunt doloremque itaque voluptatum eius asperiores atque quidem nostrum ratione nobis distinctio.</p>
+            <button class="about-btn">Read More</button>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-div" id="img">
+            <h1 class="f-h1">Contact Us</h1>
+            <div class="form">
+                <form action="" autocomplete="on" method="POST" name="musicalmenu-sheet">
+                    <label for="fullname">Name</label>
+                    <input type="text" name="Name" placeholder="Enter Your Fullname" required><br>
+                    <label for="email">Email</label>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required><br>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="Phone" placeholder="Enter Your Mobile Number" maxlength="10" minlength="10"><br>
+                    <button class="f-btn" type="submit" name="submit" value="Send message">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h1> <span> Mus</span>ical <span> M</span>enu</h1>
+        <p>&copy 2021</p>
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz8gwYtm7OjPWX-fbEdEC4f5woEImCf-KZ0RYrLg-WpfenmH_bta-qpn7GWJYdB4va5rA/exec'
+            const form = document.forms['musicalmenu-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+</body>
+</html>
